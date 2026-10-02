@@ -162,3 +162,5 @@
 .layer-buttons .mutation-lock[aria-pressed=true]{background:#333;color:#eee;border-radius:3px}
 #evolveBtn{font-size:13px;letter-spacing:-3px;padding-right:5px}
 @media(max-width:520px){.plate-tools{gap:2px;padding-left:5px;padding-right:5px}.plate-tools .tool-key{min-width:25px;width:25px}.plate-tools .lfo-deck-key,#imagesBtn{width:auto;min-width:25px}.layer-buttons button{width:21px;min-height:28px}}
+
+.action-icon{width:18px;height:18px;flex:none;vertical-align:middle;pointer-events:none}#uploadImage{display:inline-flex;align-items:center;justify-content:center;gap:6px}

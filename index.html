@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#111111" />
   <title>◇</title>
-  <link rel="stylesheet" href="./style.css?v=cd3c4e952fdb" />
-  <script type="module" src="./src/app.js?v=cd3c4e952fdb"></script>
+  <link rel="stylesheet" href="./style.css?v=96d262b3f08d" />
+  <script type="module" src="./src/app.js?v=96d262b3f08d"></script>
 </head>
 <body>
   <div class="app-shell">
@@ -28,8 +28,8 @@
           <button id="mutateBtn" class="tool-key accent-key" title="Randomize selected unlocked layer" aria-label="Randomize selected unlocked layer">✧</button>
           <button id="evolveBtn" class="tool-key accent-key" title="Mutate unlocked layers" aria-label="Mutate unlocked layers">✧✧</button>
           <button id="randomBtn" class="tool-key" title="New random flag" aria-label="New random flag">⤨</button>
-          <button id="shareBtn" class="tool-key" aria-label="Copy link">↗</button>
-          <button id="exportBtn" class="tool-key dark-key" aria-label="Export">↓</button>
+          <button id="shareBtn" class="tool-key" aria-label="Copy link"><svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 15 15 9 M10 7l2-2a5 5 0 0 1 7 7l-2 2 M14 17l-2 2a5 5 0 0 1-7-7l2-2"/></svg></button>
+          <button id="exportBtn" class="tool-key dark-key" aria-label="Export"><svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12 M7 10l5 5 5-5 M4 16v5h16v-5"/></svg></button>
         </div>
         <nav class="deck-nav" aria-label="Bancos de control">
           <button data-deck-target="format" aria-label="Formato">▭<small>Format</small></button>
@@ -66,7 +66,7 @@
     <div class="library-search"><input id="emblemSearch" type="search" placeholder="Search symbols" aria-label="Search symbols"/><div id="emblemCategories" class="library-categories" role="group" aria-label="Symbol categories"></div></div>
     <div id="emblemGrid" class="emblem-grid"></div>
     <div class="library-pages"><button id="prevEmblems" aria-label="Previous emblems">←</button><span id="emblemPage"></span><button id="nextEmblems" aria-label="Next emblems">→</button></div>
-    <div class="image-drawer-foot"><button id="uploadImage">↑ <span>Upload image</span></button><span>PNG · JPG · WEBP · SVG<br/><a href="./assets/charges/SOURCES.md" target="_blank" rel="noopener">Artwork sources</a></span></div>
+    <div class="image-drawer-foot"><button id="uploadImage"><svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 16V3 M7 8l5-5 5 5 M4 16v5h16v-5"/></svg> <span>Upload image</span></button><span>PNG · JPG · WEBP · SVG<br/><a href="./assets/charges/SOURCES.md" target="_blank" rel="noopener">Artwork sources</a></span></div>
     <input id="imageUpload" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" hidden/>
   </dialog>
   <dialog id="exportDialog" class="export-dialog"><div class="dialog-head"><span>⟡ &nbsp; ◇ &nbsp; ⟡</span><button id="closeDialog" aria-label="Cerrar">×</button></div><div class="dialog-actions"><button id="downloadSvg" aria-label="Descargar SVG">◇ <small>SVG</small> ↓</button><button id="downloadPng" aria-label="Descargar PNG">▧ <small>PNG</small> ↓</button><button id="downloadWebm" aria-label="Descargar animación WebM">∿ <small>WEBM</small> ↓</button></div></dialog>

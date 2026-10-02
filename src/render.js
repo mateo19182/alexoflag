@@ -1,4 +1,4 @@
-import { emblemById, validImageSource } from './emblems.js?v=cd3c4e952fdb';
+import { emblemById, validImageSource } from './emblems.js?v=96d262b3f08d';
 const esc = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 const num = value => Number(value.toFixed(3));
 

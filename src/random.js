@@ -1,5 +1,5 @@
-import { SYMBOL_LIBRARY } from './emblems.js?v=cd3c4e952fdb';
-import { hexToHsl, hslToHex } from './color.js?v=cd3c4e952fdb';
+import { SYMBOL_LIBRARY } from './emblems.js?v=96d262b3f08d';
+import { hexToHsl, hslToHex } from './color.js?v=96d262b3f08d';
 
 const pick = (items, rng) => items[Math.floor(rng() * items.length)];
 const range = (min, max, rng) => min + rng() * (max - min);

@@ -1,4 +1,4 @@
-import { FLAG_CHARGES } from './flag-charges.js?v=cd3c4e952fdb';
+import { FLAG_CHARGES } from './flag-charges.js?v=96d262b3f08d';
 export { FLAG_CHARGES };
 // Original vector charges. All geometry stays local and exports with the flag.
 export const EMBLEMS = [
@@ -47,7 +47,7 @@ export function loadCharge(id) {
   const charge = FLAG_CHARGES.find(item => item.id === id);
   if (!charge || charge.source) return Promise.resolve(charge);
   if (!chargeLoads.has(id)) {
-    chargeLoads.set(id, import(`./charge-data/${id}.js?v=cd3c4e952fdb`).then(module => {
+    chargeLoads.set(id, import(`./charge-data/${id}.js?v=96d262b3f08d`).then(module => {
       charge.source = module.default;
       return charge;
     }).catch(error => { chargeLoads.delete(id); throw error; }));
