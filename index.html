@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#111111" />
+  <title>◇</title>
+  <link rel="stylesheet" href="./style.css?v=cd3c4e952fdb" />
+  <script type="module" src="./src/app.js?v=cd3c4e952fdb"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <main class="workspace">
+      <section class="stage" aria-label="Lienzo de la bandera">
+        <div class="stage-top" aria-hidden="true"><span class="sigil">✳</span><span class="stage-coordinates">◌ &nbsp; ╱ &nbsp; ◇</span><span class="stage-pulse"></span></div>
+        <div class="stage-center"><div class="flag-surround" id="flagSurround"><svg id="flagSvg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vista previa de la bandera"></svg></div></div>
+        <div class="stage-bottom"><span class="stage-frequency">◁ &nbsp; <span id="ratioLabel">3:2</span> &nbsp; ▷</span><div class="stage-transport"><button id="playBtn" aria-label="Reproducir animación" aria-pressed="false">▷</button><input id="playhead" type="range" min="0" max="800" value="0" aria-label="Posición de reproducción"/><span id="timeReadout" aria-hidden="true">00:00</span></div><span class="stage-bottom-center"><span id="layerCount">00</span> layers</span></div>
+      </section>
+      <aside class="control-panel" aria-label="Instrumento de diseño" data-deck="shape">
+        <div class="plate-top"><span class="plate-mark">⟡</span><span class="plate-glyphs">FLAG / SYNTH</span><span class="plate-mark">⟡</span></div>
+        <div class="plate-tools">
+          <button id="undoBtn" class="tool-key" aria-label="Deshacer">↶</button>
+          <button id="redoBtn" class="tool-key" aria-label="Rehacer">↷</button>
+          <span class="tool-spacer"></span>
+          <button class="tool-key lfo-deck-key" data-deck-target="shape" aria-label="Layer controls" aria-pressed="true">◇ <small>Layer</small></button>
+          <button class="tool-key lfo-deck-key" data-deck-target="motion" aria-label="LFO controls" aria-pressed="false">∿ <small>LFO</small></button>
+          <button id="imagesBtn" class="tool-key" aria-label="Images and heraldic symbols">▧ <small>Images</small></button>
+          <button id="mutateBtn" class="tool-key accent-key" title="Randomize selected unlocked layer" aria-label="Randomize selected unlocked layer">✧</button>
+          <button id="evolveBtn" class="tool-key accent-key" title="Mutate unlocked layers" aria-label="Mutate unlocked layers">✧✧</button>
+          <button id="randomBtn" class="tool-key" title="New random flag" aria-label="New random flag">⤨</button>
+          <button id="shareBtn" class="tool-key" aria-label="Copy link">↗</button>
+          <button id="exportBtn" class="tool-key dark-key" aria-label="Export">↓</button>
+        </div>
+        <nav class="deck-nav" aria-label="Bancos de control">
+          <button data-deck-target="format" aria-label="Formato">▭<small>Format</small></button>
+          <button data-deck-target="layers" aria-label="Capas">▤<small>Layers</small></button>
+          <button data-deck-target="shape" aria-label="Formas">◇<small>Shape</small></button>
+          <button data-deck-target="geometry" aria-label="Geometría">⌖<small>Position</small></button>
+          <button data-deck-target="texture" aria-label="Efectos">⠿<small>Effects</small></button>
+          <button data-deck-target="motion" aria-label="LFO controls">∿<small>LFO</small></button>
+          
+        </nav>
+        <div class="plate-section format-section">
+          <div class="section-numeral" >Format</div>
+          <div class="ratio-grid" id="ratioSelect" role="group" aria-label="Proporción de la bandera"></div>
+          <div class="patch-line"><span class="jack"></span><span class="wire"></span><span class="jack"></span></div>
+          <div class="base-color"><span class="base-symbol" aria-hidden="true">▧</span><div id="backgroundColor"></div><span class="base-symbol" aria-hidden="true">◩</span></div>
+        </div>
+        <div class="plate-section layers-section module-layers">
+          <div class="section-numeral" >Layers</div>
+          <div class="layer-list" id="layerList" role="list"></div>
+          <div class="layer-foot"><button class="page-key" id="prevLayerPage" aria-label="Capas anteriores">◀</button><span id="layerPageLabel" aria-hidden="true">01</span><button class="add-key" id="addLayerBtn" aria-label="Add layer">✚</button><button class="page-key" id="nextLayerPage" aria-label="Capas siguientes">▶</button></div>
+          <div class="add-menu" id="addMenu" hidden></div>
+        </div>
+        <div class="plate-section editor-section">
+          <div class="section-numeral"  id="editorCaption">Layer controls</div>
+          <div class="inspector" id="inspector"></div>
+          <div class="motion-bank" id="motionBank" aria-label="Osciladores"></div>
+        </div>
+        <div class="plate-bottom" aria-hidden="true"><span>◦ ◦ ◦ ◦ ◦ ◦ ◦ ◦</span><span>◈</span><span>◦ ◦ ◦ ◦ ◦ ◦ ◦ ◦</span></div>
+      </aside>
+    </main>
+  </div>
+  <dialog id="imageDialog" class="image-dialog" aria-label="Images and symbols">
+    <div class="image-drawer-head"><span>Symbols</span><button id="closeImages" aria-label="Close images">×</button></div>
+    <div class="library-search"><input id="emblemSearch" type="search" placeholder="Search symbols" aria-label="Search symbols"/><div id="emblemCategories" class="library-categories" role="group" aria-label="Symbol categories"></div></div>
+    <div id="emblemGrid" class="emblem-grid"></div>
+    <div class="library-pages"><button id="prevEmblems" aria-label="Previous emblems">←</button><span id="emblemPage"></span><button id="nextEmblems" aria-label="Next emblems">→</button></div>
+    <div class="image-drawer-foot"><button id="uploadImage">↑ <span>Upload image</span></button><span>PNG · JPG · WEBP · SVG<br/><a href="./assets/charges/SOURCES.md" target="_blank" rel="noopener">Artwork sources</a></span></div>
+    <input id="imageUpload" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" hidden/>
+  </dialog>
+  <dialog id="exportDialog" class="export-dialog"><div class="dialog-head"><span>⟡ &nbsp; ◇ &nbsp; ⟡</span><button id="closeDialog" aria-label="Cerrar">×</button></div><div class="dialog-actions"><button id="downloadSvg" aria-label="Descargar SVG">◇ <small>SVG</small> ↓</button><button id="downloadPng" aria-label="Descargar PNG">▧ <small>PNG</small> ↓</button><button id="downloadWebm" aria-label="Descargar animación WebM">∿ <small>WEBM</small> ↓</button></div></dialog>
+</body>
+</html>
