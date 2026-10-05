@@ -2,6 +2,8 @@
 
 Instrumento web para diseñar banderas. Funciona por completo en el navegador.
 
+Hecho para acompañar el lanzamiento del disco de [alexoalexo](https://soundcloud.com/alexoalexo): cada uno puede diseñar y compartir su propia bandera.
+
 ## Abrir
 
 ```sh
