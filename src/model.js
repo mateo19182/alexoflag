@@ -1,6 +1,6 @@
-import { EMBLEMS, FLAG_CHARGES, SYMBOL_LIBRARY, validImageSource } from './emblems.js?v=96d262b3f08d';
-import { defaultLfos, normalizeMotion } from './modulation.js?v=96d262b3f08d';
-import { composeRandomFlag } from './random.js?v=96d262b3f08d';
+import { EMBLEMS, FLAG_CHARGES, SYMBOL_LIBRARY, validImageSource } from './emblems.js?v=601b853ff20c';
+import { defaultLfos, normalizeMotion } from './modulation.js?v=601b853ff20c';
+import { composeRandomFlag } from './random.js?v=601b853ff20c';
 
 export const TYPES = [
   { id: 'band', label: 'Band', icon: '▰', group: 'campo' },

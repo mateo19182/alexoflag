@@ -1,4 +1,4 @@
-import { hexToHsl, hslToHex } from './color.js?v=96d262b3f08d';
+import { hexToHsl, hslToHex } from './color.js?v=601b853ff20c';
 
 export const WAVES = [
   { id: 'sine', icon: '∿', name: 'Seno' },
