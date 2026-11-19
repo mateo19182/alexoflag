@@ -46,4 +46,4 @@ Upload acepta PNG, JPG, WEBP y SVG de hasta 15 MB. El navegador convierte la ima
 
 ## Publicar
 
-Ejecuta `npm run build` antes de subir el proyecto y publica `index.html`, `style.css` y `src/` juntos. El comando actualiza las URLs de los scripts y del CSS con una versión basada en su contenido para evitar reutilizar archivos antiguos del navegador. Configura el servidor para revalidar `index.html` con `Cache-Control: no-cache`.
+Ejecuta `npm run build` antes de subir el proyecto y publica `index.html`, `style.css`, `src/`, `assets/`, `robots.txt` y `sitemap.xml` juntos. El comando actualiza las URLs de los scripts y del CSS con una versión basada en su contenido para evitar reutilizar archivos antiguos del navegador. Configura el servidor para revalidar `index.html` con `Cache-Control: no-cache`.

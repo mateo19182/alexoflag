@@ -1,10 +1,10 @@
-import { SYMBOL_LIBRARY, emblemById, emblemSvg, prepareCharges } from './emblems.js?v=96d262b3f08d';
-import { TYPES, RATIOS, DITHER_SHAPES, COLOR_MODES, initialDocument, normalizeDocument, makeLayer, varyLayer, randomDocument, encodeDocument, decodeDocument } from './model.js?v=96d262b3f08d';
-import { mutateFlag } from './random.js?v=96d262b3f08d';
-import { dimensions, svgMarkup } from './render.js?v=96d262b3f08d';
-import { hexToHsl, hslToHex } from './color.js?v=96d262b3f08d';
-import { EFFECT_PORTS, togglePatch, routePatch } from './patch.js?v=96d262b3f08d';
-import { WAVES, MOD_TARGETS, frameDocument, waveValue } from './modulation.js?v=96d262b3f08d';
+import { SYMBOL_LIBRARY, emblemById, emblemSvg, prepareCharges } from './emblems.js?v=601b853ff20c';
+import { TYPES, RATIOS, DITHER_SHAPES, COLOR_MODES, initialDocument, normalizeDocument, makeLayer, varyLayer, randomDocument, encodeDocument, decodeDocument } from './model.js?v=601b853ff20c';
+import { mutateFlag } from './random.js?v=601b853ff20c';
+import { dimensions, svgMarkup } from './render.js?v=601b853ff20c';
+import { hexToHsl, hslToHex } from './color.js?v=601b853ff20c';
+import { EFFECT_PORTS, togglePatch, routePatch } from './patch.js?v=601b853ff20c';
+import { WAVES, MOD_TARGETS, frameDocument, waveValue } from './modulation.js?v=601b853ff20c';
 
 const $ = selector => document.querySelector(selector);
 const refs = {
